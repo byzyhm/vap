@@ -1,20 +1,18 @@
-apply plugin: 'java-library'
+plugins {
+    id 'java-library'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-}
-
-sourceCompatibility = "7"
-targetCompatibility = "7"
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-    }
-}
-repositories {
-    mavenCentral()
 }
 
 jar {
