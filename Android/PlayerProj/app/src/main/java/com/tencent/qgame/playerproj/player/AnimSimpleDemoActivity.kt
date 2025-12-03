@@ -49,10 +49,13 @@ class AnimSimpleDemoActivity : Activity(), IAnimListener {
     }
 
     // 视频信息
-    data class VideoInfo(val fileName: String,val md5:String)
+    data class VideoInfo(val fileName: String, val md5: String)
 
     // ps：每次修改mp4文件，但文件名不变，记得先卸载app，因为assets同名文件不会进行替换
-    private val videoInfo = VideoInfo("demo.mp4", "3132824326bb07a1143739863e1e5762")
+//    private val videoInfo = VideoInfo("demo.mp4", "3132824326bb07a1143739863e1e5762")
+    private val videoInfo = VideoInfo("video_01.mp4", "f11e15a7947b9980c142ba9d67d28000")
+//    private val videoInfo = VideoInfo("video_02.mp4", "b4c695eadeead3648306c3726ed9866b")
+//    private val videoInfo = VideoInfo("video_03.mp4", "4d34398e4df66c0c76c4421478f49620")
 
     // 动画View
     private lateinit var animView: AnimView
@@ -149,7 +152,6 @@ class AnimSimpleDemoActivity : Activity(), IAnimListener {
     override fun onFailed(errorType: Int, errorMsg: String?) {
         Log.i(TAG, "onFailed errorType=$errorType errorMsg=$errorMsg")
     }
-
 
 
     override fun onPause() {
